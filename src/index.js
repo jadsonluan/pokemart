@@ -45,7 +45,7 @@ class App extends React.Component {
       <div id="app">
         <header id="header">
           <h1>PokeMart</h1>
-          <input type="text" name="productSearched" onChange={this.handleChange}></input>
+          <input type="text" name="productSearched" onChange={this.handleChange} placeholder="Pesquisar"></input>
         </header>
 
         <div id="body">
