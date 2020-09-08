@@ -11,6 +11,9 @@ body {
     #header {
         background-color: dodgerblue;
         padding: 20px 55px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     #body {

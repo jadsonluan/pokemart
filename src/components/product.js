@@ -4,7 +4,9 @@ import '../styles/product.scss';
 class Product extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { front: true }
+    this.state = {
+      front: true
+    }
   }
 
   flip = () => {
@@ -15,15 +17,18 @@ class Product extends React.Component {
     let product;
     if (this.state.front) {
       product = (
-        <div className="front" onClick={this.flip}>
-          <img src={this.props.product.sprites.default} alt="master ball"></img>
-          <h1>{this.props.product.names[7].name}</h1>
+        <div className="front" >
+          <div className="imgContainer">
+            <img src={this.props.product.img} alt="master ball"></img>
+          </div>
+          <h1>{this.props.product.name}</h1>
+          <div className="info" onClick={this.flip}></div>
         </div>
       )
     } else {
       product = (
         <div className="back" onClick={this.flip}>
-          <p className="description">{this.props.product.flavor_text_entries[0].text}</p>
+          <p className="description">{this.props.product.description}</p>
         </div>
       )
     }
